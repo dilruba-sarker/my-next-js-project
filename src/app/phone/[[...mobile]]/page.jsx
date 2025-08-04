@@ -1,3 +1,4 @@
+import { notFound } from 'next/navigation'
 import React from 'react'
 
 export  default async function Phones({params}) {
@@ -9,6 +10,9 @@ export  default async function Phones({params}) {
     // }else if(mobile.length===1){
     //     return <p>See and get Mobile: {mobile[0]}</p>
     // }
+    if(mobile.length>3){
+        return notFound()
+    }
   return (
     <div>
 
